@@ -70,12 +70,15 @@ public class BoardGridView extends View {
 
     @Override
     protected void onDraw(Canvas canvas){
+        // Create a canvas for our board
         canvas.drawColor(Color.WHITE);
 
+        // Check if col/row isn't 0, now redundant since size is now hardcoded.
         if(columns == 0 || rows == 0){
             return;
         }
 
+        // Set boardDimensions, always square according to shortest side.
         int boardDim;
         int boardWidth = getWidth();
         int boardHeight = getHeight();
@@ -87,6 +90,7 @@ public class BoardGridView extends View {
             boardDim = boardHeight;
         }
 
+        // draw rectangles and make black or white depending on a mismatch between col/row modulus.
         for (int i = 0; i < columns; i++) {
             for (int j = 0; j < rows; j++) {
                 if (i%2 == 1 ^ j%2 == 0){
@@ -109,6 +113,7 @@ public class BoardGridView extends View {
         }
     }
 
+    // Force gridView to be square on every screenSize.
     @Override
     protected void onMeasure(int widthMeasurement, int heightMeasurement) {
         super.onMeasure(widthMeasurement, heightMeasurement);
@@ -124,6 +129,7 @@ public class BoardGridView extends View {
         setMeasuredDimension(size, size);
     }
 
+    // TouchEvent, because we are obviously going to need that.
     @Override
     public boolean onTouchEvent(MotionEvent event){
         if (event.getAction() == MotionEvent.ACTION_DOWN){
