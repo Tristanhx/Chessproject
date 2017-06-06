@@ -1,4 +1,4 @@
-package com.example.tristan.chess_project.ChessEngine.Pieces;
+package com.example.tristan.chess_project.ChessEngine.pieces;
 
 import com.example.tristan.chess_project.Alliance;
 import com.example.tristan.chess_project.ChessEngine.board.Board;

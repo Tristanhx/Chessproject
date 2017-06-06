@@ -13,7 +13,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button testButton = (Button) findViewById(R.id.button);
+        Button testButton = (Button) findViewById(R.id.play_button);
+        Button scoreButton = (Button) findViewById(R.id.score_button);
 
 
     }
@@ -22,5 +23,10 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, GameActivity.class);
         startActivity(intent);
 
+    }
+
+    public void scoreBoard(View view){
+        Intent intent = new Intent(this, ScoreActivity.class);
+        startActivity(intent);
     }
 }

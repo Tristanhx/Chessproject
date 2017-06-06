@@ -8,7 +8,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 
-import com.example.tristan.chess_project.ChessEngine.Pieces.Pieces;
+import com.example.tristan.chess_project.ChessEngine.pieces.Pieces;
 import com.example.tristan.chess_project.R;
 
 import java.util.ArrayList;
